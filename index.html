@@ -1,39 +1,338 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huellitas en Busca de Hogar</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🐾 Gatitos en Adopción · Bolivia</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-    <header>
-        <h1>Huellitas de Amor</h1>
-        <p>Encuentra a tu compañero ideal</p>
-    </header>
+<!-- ╔══════════════════════════════════════╗
+     ║           ENCABEZADO / HERO          ║
+     ╚══════════════════════════════════════╝ -->
+<header class="hero">
+  <div class="hero-blobs">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+  <div class="paw-pattern"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">🇧🇴 Santa Cruz de la Sierra · Bolivia</div>
+    <h1 class="hero-title">Dale un hogar<br/>a quien más<br/><span class="accent">lo merece</span> 🐾</h1>
+    <p class="hero-sub">Tres gatitos adorables buscan una familia<br/>llena de amor. ¿Los conoces?</p>
+    <div class="hero-btns">
+      <a href="#gatitos" class="btn-main">Ver gatitos ↓</a>
+      <a href="https://wa.me/59168912447?text=¡Hola!%20Vi%20los%20gatitos%20en%20adopción%20y%20quiero%20información%20🐱" target="_blank" class="btn-wa-hero">
+        💬 WhatsApp
+      </a>
+    </div>
+  </div>
+  <div class="hero-paws">🐾✨🐱💛🐾</div>
+</header>
 
-    <main class="contenedor">
-        <article class="tarjeta">
-            <div class="imagen-box">
-                <img src="gatito.jpeg.jpeg" alt="Gatito en adopción">
-                <span class="badge">Macho</span>
-            </div>
-            <div class="info">
-                <h2>Pequeño Gris</h2>
-                <p class="descripcion">
-                    Este tierno gatito de ojos azules está buscando un hogar lleno de amor. 
-                    Es muy juguetón, curioso y le encanta explorar.
-                </p>
-                <div class="detalles">
-                    <span>🐾 Juguetón</span>
-                    <span>🐾 Cariñoso</span>
-                </div>
-                <a href="#" class="btn-adopcion">¡Adoptar ahora!</a>
-            </div>
-        </article>
-    </main>
+
+<!-- ╔══════════════════════════════════════╗
+     ║         SECCIÓN DE GATITOS           ║
+     ╚══════════════════════════════════════╝ -->
+<section class="cats-section" id="gatitos">
+  <div class="section-title">
+    <span class="tag-eyebrow">Camada disponible 🐱</span>
+    <h2>Conoce a los tres</h2>
+    <p>Sanos, juguetones y con mucho amor para dar</p>
+  </div>
+
+  <div class="cards-grid">
+
+    <!-- ════════════════════════════════════════
+         TARJETA 1 — EL MACHITO
+         ════════════════════════════════════════ -->
+    <article class="cat-card card-male">
+      <div class="card-ribbon male">♂ Machito</div>
+
+      <!-- ┌─────────────────────────────────────────┐
+           │  GALERÍA DE FOTOS — MACHITO             │
+           │  Para cambiar las fotos, reemplaza el   │
+           │  src="..." de cada <img> por la ruta    │
+           │  de tu foto. Ejemplo:                   │
+           │    src="foto_machito_1.jpg"             │
+           │    src="foto_machito_2.jpg"             │
+           │    src="foto_machito_3.jpg"             │
+           └─────────────────────────────────────────┘ -->
+      <div class="gallery" id="gal1">
+
+        <!-- FOTO 1 DEL MACHITO → cambia src por tu imagen -->
+        <div class="gslide active">
+          <img src="gatito1.jpeg" alt="Machito gris - foto 1"/>
+        </div>
+
+        <!-- FOTO 2 DEL MACHITO → cambia src por tu imagen -->
+        <div class="gslide">
+          <div class="no-photo gold">
+            <span>📷</span>
+            <p>Foto 2 del machito</p>
+            <small>Reemplaza este bloque con<br/>&lt;img src="foto_machito_2.jpg"/&gt;</small>
+          </div>
+        </div>
+
+        <!-- FOTO 3 DEL MACHITO → cambia src por tu imagen -->
+        <div class="gslide">
+          <div class="no-photo gold">
+            <span>📷</span>
+            <p>Foto 3 del machito</p>
+            <small>Reemplaza este bloque con<br/>&lt;img src="foto_machito_3.jpg"/&gt;</small>
+          </div>
+        </div>
+
+        <button class="arr arr-l" onclick="goPrev('gal1')">‹</button>
+        <button class="arr arr-r" onclick="goNext('gal1')">›</button>
+        <div class="dots" id="dots-gal1">
+          <span class="dot on" onclick="goTo('gal1',0)"></span>
+          <span class="dot"    onclick="goTo('gal1',1)"></span>
+          <span class="dot"    onclick="goTo('gal1',2)"></span>
+        </div>
+      </div>
+      <!-- FIN GALERÍA MACHITO -->
+
+      <div class="card-info">
+        <h3>El Caballero Gris</h3>
+        <p>Pelaje gris perla y ojos azules que enamoran. Curioso, juguetón y con mucha personalidad. ¡El único machito de la camada!</p>
+        <div class="traits">
+          <span>🩶 Gris</span>
+          <span>💙 Ojos azules</span>
+          <span>⚡ Juguetón</span>
+        </div>
+        <a class="btn-wa-card" href="https://wa.me/59168912447?text=¡Hola!%20Me%20interesa%20adoptar%20al%20Caballero%20Gris%20(el%20machito)%20🐱" target="_blank">
+          💬 Quiero adoptarlo
+        </a>
+      </div>
+    </article>
+
+
+    <!-- ════════════════════════════════════════
+         TARJETA 2 — HEMBRITA 1
+         ════════════════════════════════════════ -->
+    <article class="cat-card card-female1">
+      <div class="card-ribbon female">♀ Hembrita</div>
+
+      <!-- ┌─────────────────────────────────────────┐
+           │  GALERÍA DE FOTOS — HEMBRITA 1          │
+           │  Para cambiar las fotos, reemplaza el   │
+           │  src="..." de cada <img>. Ejemplo:      │
+           │    src="hembrita1_foto1.jpg"            │
+           │    src="hembrita1_foto2.jpg"            │
+           │    src="hembrita1_foto3.jpg"            │
+           └─────────────────────────────────────────┘ -->
+      <div class="gallery" id="gal2">
+
+        <!-- FOTO 1 DE LA HEMBRITA 1 → cambia src por tu imagen -->
+        <div class="gslide active">
+          <div class="no-photo pink">
+            <span>📷</span>
+            <p>Foto 1 de la hembrita</p>
+            <small>Reemplaza con:<br/>&lt;img src="hembrita1_foto1.jpg"/&gt;</small>
+          </div>
+        </div>
+
+        <!-- FOTO 2 DE LA HEMBRITA 1 → cambia src por tu imagen -->
+        <div class="gslide">
+          <div class="no-photo pink">
+            <span>📷</span>
+            <p>Foto 2 de la hembrita</p>
+            <small>Reemplaza con:<br/>&lt;img src="hembrita1_foto2.jpg"/&gt;</small>
+          </div>
+        </div>
+
+        <!-- FOTO 3 DE LA HEMBRITA 1 → cambia src por tu imagen -->
+        <div class="gslide">
+          <div class="no-photo pink">
+            <span>📷</span>
+            <p>Foto 3 de la hembrita</p>
+            <small>Reemplaza con:<br/>&lt;img src="hembrita1_foto3.jpg"/&gt;</small>
+          </div>
+        </div>
+
+        <button class="arr arr-l" onclick="goPrev('gal2')">‹</button>
+        <button class="arr arr-r" onclick="goNext('gal2')">›</button>
+        <div class="dots" id="dots-gal2">
+          <span class="dot on" onclick="goTo('gal2',0)"></span>
+          <span class="dot"    onclick="goTo('gal2',1)"></span>
+          <span class="dot"    onclick="goTo('gal2',2)"></span>
+        </div>
+      </div>
+      <!-- FIN GALERÍA HEMBRITA 1 -->
+
+      <div class="card-info">
+        <h3>La Princesita</h3>
+        <p>Dulce, elegante y muy cariñosa. Le encanta explorar cada rincón y conquistar corazones. ¡Perfecta para un hogar lleno de mimos!</p>
+        <div class="traits">
+          <span>🌸 Hembra</span>
+          <span>🤍 Cariñosa</span>
+          <span>🔍 Curiosa</span>
+        </div>
+        <a class="btn-wa-card" href="https://wa.me/59168912447?text=¡Hola!%20Me%20interesa%20adoptar%20a%20la%20Princesita%20(hembrita%201)%20🐱" target="_blank">
+          💬 Quiero adoptarla
+        </a>
+      </div>
+    </article>
+
+
+    <!-- ════════════════════════════════════════
+         TARJETA 3 — HEMBRITA 2
+         ════════════════════════════════════════ -->
+    <article class="cat-card card-female2">
+      <div class="card-ribbon female">♀ Hembrita</div>
+
+      <!-- ┌─────────────────────────────────────────┐
+           │  GALERÍA DE FOTOS — HEMBRITA 2          │
+           │  Para cambiar las fotos, reemplaza el   │
+           │  src="..." de cada <img>. Ejemplo:      │
+           │    src="hembrita2_foto1.jpg"            │
+           │    src="hembrita2_foto2.jpg"            │
+           │    src="hembrita2_foto3.jpg"            │
+           └─────────────────────────────────────────┘ -->
+      <div class="gallery" id="gal3">
+
+        <!-- FOTO 1 DE LA HEMBRITA 2 → cambia src por tu imagen -->
+        <div class="gslide active">
+          <div class="no-photo lavender">
+            <span>📷</span>
+            <p>Foto 1 de la hembrita</p>
+            <small>Reemplaza con:<br/>&lt;img src="hembrita2_foto1.jpg"/&gt;</small>
+          </div>
+        </div>
+
+        <!-- FOTO 2 DE LA HEMBRITA 2 → cambia src por tu imagen -->
+        <div class="gslide">
+          <div class="no-photo lavender">
+            <span>📷</span>
+            <p>Foto 2 de la hembrita</p>
+            <small>Reemplaza con:<br/>&lt;img src="hembrita2_foto2.jpg"/&gt;</small>
+          </div>
+        </div>
+
+        <!-- FOTO 3 DE LA HEMBRITA 2 → cambia src por tu imagen -->
+        <div class="gslide">
+          <div class="no-photo lavender">
+            <span>📷</span>
+            <p>Foto 3 de la hembrita</p>
+            <small>Reemplaza con:<br/>&lt;img src="hembrita2_foto3.jpg"/&gt;</small>
+          </div>
+        </div>
+
+        <button class="arr arr-l" onclick="goPrev('gal3')">‹</button>
+        <button class="arr arr-r" onclick="goNext('gal3')">›</button>
+        <div class="dots" id="dots-gal3">
+          <span class="dot on" onclick="goTo('gal3',0)"></span>
+          <span class="dot"    onclick="goTo('gal3',1)"></span>
+          <span class="dot"    onclick="goTo('gal3',2)"></span>
+        </div>
+      </div>
+      <!-- FIN GALERÍA HEMBRITA 2 -->
+
+      <div class="card-info">
+        <h3>La Traviesa</h3>
+        <p>La más pícara y divertida de las tres. Siempre lista para jugar, saltar y llenar la casa de alegría. ¡Te hará reír todos los días!</p>
+        <div class="traits">
+          <span>🌺 Hembra</span>
+          <span>⚡ Traviesa</span>
+          <span>💛 Alegre</span>
+        </div>
+        <a class="btn-wa-card" href="https://wa.me/59168912447?text=¡Hola!%20Me%20interesa%20adoptar%20a%20la%20Traviesa%20(hembrita%202)%20🐱" target="_blank">
+          💬 Quiero adoptarla
+        </a>
+      </div>
+    </article>
+
+  </div><!-- /cards-grid -->
+</section>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║           FRANJA INFORMATIVA         ║
+     ╚══════════════════════════════════════╝ -->
+<section class="info-strip">
+  <div class="info-inner">
+    <div class="info-item">
+      <div class="info-icon">🏠</div>
+      <strong>Entrega en SCZ</strong>
+      <p>Coordinamos la entrega en Santa Cruz de la Sierra</p>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">💚</div>
+      <strong>Adopción responsable</strong>
+      <p>Buscamos familias que los amen toda la vida</p>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">🐾</div>
+      <strong>Sanos y activos</strong>
+      <p>Gatitos saludables y llenos de energía</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║           LLAMADA A ACCIÓN FINAL     ║
+     ╚══════════════════════════════════════╝ -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-paws">🐾 🐾 🐾</div>
+    <h2>¿Te enamoraste<br/>de alguno? 💛</h2>
+    <p>Escríbenos por WhatsApp y te contamos todo.<br/>Coordinamos la entrega en Santa Cruz, Bolivia.</p>
+    <a class="btn-cta"
+       href="https://wa.me/59168912447?text=¡Hola!%20Vi%20los%20gatitos%20en%20adopción%20y%20quiero%20más%20información%20🐱"
+       target="_blank">
+      📲 +591 68912447 · Escríbenos ahora
+    </a>
+  </div>
+</section>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║                FOOTER               ║
+     ╚══════════════════════════════════════╝ -->
+<footer class="site-footer">
+  <p>🐾 Gatitos en Adopción · Santa Cruz de la Sierra, Bolivia 🇧🇴</p>
+  <p class="footer-small">Hecho con amor para encontrar un hogar para cada gatito ❤️</p>
+</footer>
+
+
+<!-- ╔══════════════════════════════════════╗
+     ║          JAVASCRIPT — GALERÍA        ║
+     ╚══════════════════════════════════════╝ -->
+<script>
+  function getSlides(galId) {
+    return document.getElementById(galId).querySelectorAll('.gslide');
+  }
+  function getDots(galId) {
+    return document.getElementById('dots-' + galId).querySelectorAll('.dot');
+  }
+  function currentIdx(galId) {
+    const slides = getSlides(galId);
+    for (let i = 0; i < slides.length; i++)
+      if (slides[i].classList.contains('active')) return i;
+    return 0;
+  }
+  function goTo(galId, idx) {
+    const slides = getSlides(galId);
+    const dots   = getDots(galId);
+    slides.forEach(s => s.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('on'));
+    slides[idx].classList.add('active');
+    dots[idx].classList.add('on');
+  }
+  function goNext(galId) {
+    const slides = getSlides(galId);
+    goTo(galId, (currentIdx(galId) + 1) % slides.length);
+  }
+  function goPrev(galId) {
+    const slides = getSlides(galId);
+    goTo(galId, (currentIdx(galId) - 1 + slides.length) % slides.length);
+  }
+</script>
 
 </body>
 </html>
